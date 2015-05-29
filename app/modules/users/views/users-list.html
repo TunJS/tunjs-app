@@ -1,0 +1,30 @@
+
+  <form class="form-inline" role="form">
+    <button type="button" class="btn btn-default" ng-click="usersCtrl.reset(); usersCtrl.load();">Reload</button>
+    <button type="button" class="btn btn-default" ng-click="usersCtrl.goAdd()">Add</button>
+  </form>
+
+  <table ng-table="usersCtrl.tableParams" show-filter="true" class="table">
+    <tr ng-repeat="user in $data">
+      <td data-title="'Firstname'" sortable="'firstname'" filter="{ 'firstname': 'text' }">
+        {{user.firstname}}
+      </td>
+      <td data-title="'Lastname'" sortable="'lastname'" filter="{ 'lastname': 'text' }">
+        {{user.lastname}}
+      </td>
+      <!-- <td data-title="'Gender'" sortable="'gender'" filter="{ 'gender': 'text' }">
+        {{user.gender|uppercase}}
+      </td> -->
+      <!-- <td data-title="'Email'" sortable="'email'" filter="{ 'email': 'text' }">
+        {{user.email}}
+      </td> -->
+      <td data-title="'role'" sortable="'role'" filter="{ 'role': 'text' }">
+        {{user.role|uppercase}}
+      </td>
+      <td data-title="'Action'">
+        <a ng-click="usersCtrl.goEdit(user)">Edit</a>
+        |
+        <a ng-click="usersCtrl.goDelete(user)">Delete</a>
+      </td>
+    </tr>
+  </table>

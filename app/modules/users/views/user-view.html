@@ -1,0 +1,20 @@
+
+  <dl class="dl-horizontal">
+    <dt>Id</dt>
+    <dd>{{usersCtrl.user.id}}</dd>
+    <dt>Firstname</dt>
+    <dd>{{usersCtrl.user.firstname}}</dd>
+    <dt>Lastname</dt>
+    <dd>{{usersCtrl.user.lastname}}</dd>
+    <dt>Gender</dt>
+    <dd>{{usersCtrl.user.gender|uppercase}}</dd>
+    <dt>Email</dt>
+    <dd>{{usersCtrl.user.email}}</dd>
+    <dt>Role</dt>
+    <dd>{{usersCtrl.user.role|uppercase}}</dd>
+  </dl>
+
+
+  <button class="btn btn-danger" ng-click="usersCtrl.goDelete(usersCtrl.user);">Delete</button>
+
+  <button class="btn btn-default" ng-click="usersCtrl.goEdit(usersCtrl.user);">Edit</button>
